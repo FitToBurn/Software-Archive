@@ -16,13 +16,13 @@ namespace EscapeFromTarkovCheat.Features
                 return;
             }
 
-            botGame.BotsController.SpawnBotDebugServer(
+/*            botGame.BotsController.SpawnBotDebugServer(
                 EPlayerSide.Savage,        // Side of the bot (Savage/Scav)
                 false,                     // Not a player scav
                 bossType,                  // Type of bot to spawn
                 BotDifficulty.normal,      // Difficulty level of the bot
                 true                       // I smoke crack for fun :)
-            );
+            );*/
 
         }
         public void SpawnBear()
@@ -34,13 +34,13 @@ namespace EscapeFromTarkovCheat.Features
                 return;
             }
 
-            botGame.BotsController.SpawnBotDebugServer(
+/*            botGame.BotsController.SpawnBotDebugServer(
                 EPlayerSide.Bear,
                 false,
                 WildSpawnType.pmcBEAR,
                 BotDifficulty.normal,
                 true
-            );
+            );*/
 
         }
 
@@ -53,13 +53,13 @@ namespace EscapeFromTarkovCheat.Features
                 return;
             }
 
-            botGame.BotsController.SpawnBotDebugServer(
+/*            botGame.BotsController.SpawnBotDebugServer(
                 EPlayerSide.Usec,
                 false,
                 WildSpawnType.pmcUSEC,
                 BotDifficulty.normal,
                 true
-            );
+            );*/
 
         }
 
@@ -107,13 +107,13 @@ namespace EscapeFromTarkovCheat.Features
                     break;
             }
 
-            botGame.BotsController.SpawnBotDebugServer(
+/*            botGame.BotsController.SpawnBotDebugServer(
                 EPlayerSide.Savage,        // Side of the bot (Savage/Scav)
                 false,                     // Not a player scav
                 bossType,                  // Type of bot to spawn
                 BotDifficulty.normal,      // Difficulty level of the bot
                 true                       // I smoke crack for fun :)
-            );
+            );*/
 
         }
         public void SpawnRandomPMC()
@@ -213,13 +213,13 @@ namespace EscapeFromTarkovCheat.Features
                     return;
             }
 
-            botGame.BotsController.SpawnBotDebugServer(
+/*            botGame.BotsController.SpawnBotDebugServer(
                 EPlayerSide.Savage,        // Side of the bot (Savage/Scav)
                 false,                     // Not a player scav
                 bossType,                  // Type of bot to spawn
                 BotDifficulty.normal,      // Difficulty level of the bot
                 true                       // I smoke crack for fun :)
-            );
+            );*/
 
         }
     }

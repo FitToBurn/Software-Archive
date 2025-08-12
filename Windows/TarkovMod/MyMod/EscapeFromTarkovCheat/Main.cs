@@ -223,8 +223,8 @@ namespace EscapeFromTarkovCheat
                 }
                 _nextSpawnTime = Time.time + Settings.SpawnInterval * 10f;
             }
-            
-            if (Settings.IncreaseTraderStanding)
+
+/*            if (Settings.IncreaseTraderStanding)
             {
                 Player localPlayer = Main.LocalPlayer;
                 if (localPlayer != null)
@@ -258,7 +258,7 @@ namespace EscapeFromTarkovCheat
                     }
                     Settings.IncreaseTraderStanding = false;
                 }
-            }
+            }*/
 
             //if (LocalPlayer != null)
             //{

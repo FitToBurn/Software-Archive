@@ -29,7 +29,7 @@ namespace EscapeFromTarkovCheat.Feauters.Misc
         {
             Assembly assembly = Assembly.Load("Assembly-CSharp");
             //public static readonly \uXXXX Existence;
-            Field = assembly.GetType("\uEC83", true).GetField("Existence", BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy).GetValue(null);
+            Field = assembly.GetType("\uED21", true).GetField("Existence", BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy).GetValue(null);
             _nextRegenTime = Time.time;
             _nextBuffTime = Time.time;
         }

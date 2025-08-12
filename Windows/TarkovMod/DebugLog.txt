@@ -9,166 +9,277 @@ AntiVirus Running: c:\program files (x86)\kaspersky lab\kaspersky internet secur
 	PROCESS_VM_READ
 [MainWindowViewModel] - Checking Processes for Mono
 	svchost.exe
-	chrome.exe
-	AppleMobileDeviceProcess.exe
 	svchost.exe
-	svchost.exe
-	RTSSHooksLoader64.exe
-	chrome.exe
-	Adobe Elements 2022 Update Service.exe
-    Error Getting User Process: csrss - 拒绝访问。
-	svchost.exe
-	Enpass.exe
-	svchost.exe
-    Error Getting User Process: wininit - 拒绝访问。
-	conhost.exe
-	chrome.exe
-	svchost.exe
-	chrome.exe
-	ChsIME.exe
-	svchost.exe
-	svchost.exe
-	conhost.exe
-	svchost.exe
-	Spotify.exe
-	svchost.exe
-	Notion.exe
-	svchost.exe
-	steamwebhelper.exe
-	steamwebhelper.exe
+	WeChatAppEx.exe
 	WeChatOCR.exe
-	conhost.exe
-	backgroundTaskHost.exe
-	smartscreen.exe
-	chrome.exe
-	svchost.exe
-	chrome.exe
-	ShellExperienceHost.exe
-	svchost.exe
-	chrome.exe
-	steamwebhelper.exe
-	Notion.exe
-	WeChatPlayer.exe
-	Discord.exe
-	WmiPrvSE.exe
-	backgroundTaskHost.exe
-	svchost.exe
-	cloud-drive-ui.exe
-	chrome.exe
-	cloudmusic.exe
-	svchost.exe
-	steamservice.exe
-	Widgets.exe
-	svchost.exe
-	svchost.exe
-	svchost.exe
-	svchost.exe
-	svchost.exe
-	IntelCpHDCPSvc.exe
-	svchost.exe
-	BsgLauncher.exe
-	WeChatAppEx.exe
-	avpui.exe
-    ERROR SCANNING: avpui - Failed to enumerate process modules
-	dllhost.exe
-	svchost.exe
-	chrome.exe
-	DiscSoftBusServiceLite.exe
 	dwm.exe
-	Clash for Windows.exe
-	svchost.exe
-	WeChat.exe
-	taskhostw.exe
-	hid.exe
-	WeChatAppEx.exe
-	conhost.exe
-	crashpad_handler.exe
 	svchost.exe
 	Spotify.exe
-	Notion.exe
-	SystemSettings.exe
-	parsecd.exe
-	backgroundTaskHost.exe
 	svchost.exe
-	steam.exe
-    Error Getting User Process: svchost - 拒绝访问。
-	PhoneExperienceHost.exe
-	Discord.exe
-	Notion.exe
-	OVRRedir.exe
-	RuntimeBroker.exe
-	backgroundTaskHost.exe
+	Chatbox.exe
+	svchost.exe
+	chrome.exe
+	dasHost.exe
+	PikPak.exe
+	svchost.exe
+	ServiceHub.Host.dotnet.x64.exe
+	DownloadServer.exe
+	svchost.exe
+	svchost.exe
 	fontdrvhost.exe
-    Error Getting User Process: Registry - 拒绝访问。
-	svchost.exe
-	svchost.exe
-	svchost.exe
-	Spotify.exe
-	chrome.exe
-	chrome.exe
-	DTShellHlp.exe
-	backgroundTaskHost.exe
-	svchost.exe
-	svchost.exe
-	svchost.exe
-	clash-win64.exe
-	DataExchangeHost.exe
-	aida64.exe
-	conhost.exe
-	ApplicationFrameHost.exe
-	Clash for Windows.exe
-	MoUsoCoreWorker.exe
-	chrome.exe
-    Error Getting User Process: csrss - 拒绝访问。
-	svchost.exe
-	chrome.exe
-	Notion.exe
-	cloud-drive-connect.exe
-	GameBarPresenceWriter.exe
-	WeChatAppEx.exe
-	svchost.exe
-	Rainmeter.exe
-	WUDFHost.exe
-	svchost.exe
-	dllhost.exe
-	svchost.exe
-	Spotify.exe
-	steamwebhelper.exe
-	Notion.exe
-	cloudmusic.exe
-	chrome.exe
-    Error Getting User Process: Memory Compression - 拒绝访问。
-	BsgLauncher.exe
-	WMIRegistrationService.exe
-	BsgLauncher.exe
-	Telegram.exe
-	chrome.exe
-	ChsIME.exe
-	parsecd.exe
-    Error Getting User Process: svchost - 拒绝访问。
-	svchost.exe
-	svchost.exe
-	EscapeFromTarkov.exe
-		Mono found in process: EscapeFromTarkov.exe
-
-FINISHED SCANNING PROCESSES...
-
-[MainWindowViewModel] - ExecuteRefresh Entered
-[MainWindowViewModel] - Setting Process Access Rights:
-	PROCESS_QUERY_INFORMATION
-	PROCESS_VM_READ
-[MainWindowViewModel] - Checking Processes for Mono
-	chrome.exe
-	svchost.exe
-	svchost.exe
-	hid.exe
-	svchost.exe
-	svchost.exe
-    Error Getting User Process: smss - 拒绝访问。
-	ChsIME.exe
+	Enpass.exe
+	ctfmon.exe
+	RuntimeBroker.exe
 	svchost.exe
 	Microsoft.ServiceHub.Controller.exe
+	RuntimeBroker.exe
+	ServiceHub.VSDetouredHost.exe
+	WmiPrvSE.exe
+	Notion.exe
+	RuntimeBroker.exe
+	conhost.exe
+	explorer.exe
+	svchost.exe
+	RuntimeBroker.exe
+	PhoneExperienceHost.exe
+	HxAccounts.exe
+	svchost.exe
+	chrome.exe
+	Clash for Windows.exe
+	svchost.exe
+	Discord.exe
+	chrome.exe
+    Error Getting User Process: smss - 拒绝访问。
+	chrome.exe
+	RTSSHooksLoader64.exe
+	PikPak.exe
+	cloudmusic.exe
+	RuntimeBroker.exe
+	svchost.exe
+	svchost.exe
+	svchost.exe
+	chrome.exe
+	EncoderServer.exe
+	CrossDeviceService.exe
+	DiscSoftBusServiceLite.exe
+	UnityCrashHandler64.exe
+	chrome.exe
+	Spotify.exe
+	svchost.exe
+    Error Getting User Process: svchost - 拒绝访问。
+	svchost.exe
+	KOOK.exe
+	svchost.exe
+	KOOK.exe
+	steamwebhelper.exe
+	devenv.exe
+	svchost.exe
+	Notion.exe
+	mmcrashpad_handler64.exe
 	WeChatAppEx.exe
+	ServiceHub.Host.netfx.x86.exe
+	chrome.exe
+	BsgLauncher.exe
+	Telegram.exe
+	steamwebhelper.exe
+	Spotify.exe
+	WUDFHost.exe
+	KOOK.exe
+	parsecd.exe
+	svchost.exe
+	PerfWatson2.exe
+	chrome.exe
+	cloudmusic.exe
+	NVDisplay.Container.exe
+	svchost.exe
+	RtkAudUService64.exe
+	svchost.exe
+	MSBuild.exe
+	WeChatPlayer.exe
+	svchost.exe
+	svchost.exe
+	dllhost.exe
+	ChsIME.exe
+	smartscreen.exe
+	WMIRegistrationService.exe
+	svchost.exe
+	svchost.exe
+	AppleMobileDeviceProcess.exe
+	KOOK.exe
+	svchost.exe
+	chrome.exe
+	wlanext.exe
+	dllhost.exe
+	Clash for Windows.exe
+	ServiceHub.IntellicodeModelService.exe
+	WeChatAppEx.exe
+	chrome.exe
+	cloudmusic.exe
+	svchost.exe
+	svchost.exe
+	dllhost.exe
+	steamwebhelper.exe
+	conhost.exe
+	AggregatorHost.exe
+	RTSS.exe
+    Error Getting User Process: Registry - 拒绝访问。
+	aida64.exe
+	svchost.exe
+	StartMenuExperienceHost.exe
+	lsass.exe
+    ERROR SCANNING: lsass - Failed to enumerate process modules
+	svchost.exe
+	svchost.exe
+	ServiceHub.IdentityHost.exe
+	Spotify.exe
+	steamwebhelper.exe
+	chrome.exe
+	chrome.exe
+	ServiceHub.IndexingService.exe
+	pservice.exe
+	SearchHost.exe
+	clash-core-service.exe
+    Error Getting User Process: services - 拒绝访问。
+	svchost.exe
+	WmiPrvSE.exe
+	Notion.exe
+	taskhostw.exe
+	lghub_updater.exe
+	chrome.exe
+	winlogon.exe
+	chrome.exe
+	Rainmeter.exe
+	Clash for Windows.exe
+	BsgLauncher.exe
+	avpui.exe
+    ERROR SCANNING: avpui - Failed to enumerate process modules
+	svchost.exe
+	vss-service-x64.exe
+	svchost.exe
+	Clash for Windows.exe
+	SystemSettingsBroker.exe
+	BsgLauncher.exe
+	OVRServiceLauncher.exe
+	WeChatAppEx.exe
+	Chatbox.exe
+	logi_lamparray_service.exe
+	svchost.exe
+	chrome.exe
+	svchost.exe
+	svchost.exe
+	backgroundTaskHost.exe
+	ServiceHub.RoslynCodeAnalysisService.exe
+    Error Getting User Process: csrss - 拒绝访问。
+	jhi_service.exe
+	conhost.exe
+	Widgets.exe
+    Error Getting User Process: wininit - 拒绝访问。
+	svchost.exe
+	svchost.exe
+	SystemSettings.exe
+	svchost.exe
+	conhost.exe
+	explorer.exe
+	explorer.exe
+	WeChatAppEx.exe
+	OneApp.IGCC.WinService.exe
+	svchost.exe
+    Error Getting User Process: avp - 拒绝访问。
+	svchost.exe
+	svchost.exe
+	svchost.exe
+	svchost.exe
+	chrome.exe
+	service.exe
+	BsgLauncher.exe
+	svchost.exe
+	Adobe Elements 2022 Update Service.exe
+	Agent.exe
+	svchost.exe
+	WeChatUtility.exe
+	svchost.exe
+	conhost.exe
+	svchost.exe
+	svchost.exe
+	chrome.exe
+	kernelUpdate.exe
+	Notion.exe
+	svchost.exe
+	chrome.exe
+	PikPak.exe
+	svchost.exe
+	chrome.exe
+	taskhostw.exe
+	svchost.exe
+	PikPak.exe
+	Battle.net.exe
+	conhost.exe
+	MSPCManagerService.exe
+	TextInputHost.exe
+	svchost.exe
+	WeChatAppEx.exe
+	OVRRedir.exe
+    Error Getting User Process: svchost - 拒绝访问。
+	svchost.exe
+	chrome.exe
+    Error Getting User Process: csrss - 拒绝访问。
+	chrome.exe
+	parsecd.exe
+	svchost.exe
+	BsgLauncher.exe
+	chrome.exe
+	svchost.exe
+	svchost.exe
+	svchost.exe
+	Battle.net.exe
+	svchost.exe
+	WeChatAppEx.exe
+	BsgLauncher.exe
+	RuntimeBroker.exe
+	FanControl.exe
+	audiodg.exe
+	steamwebhelper.exe
+	Notion.exe
+	conhost.exe
+	sihost.exe
+	svchost.exe
+	YunDetectService.exe
+	WeChat.exe
+	chrome.exe
+	chrome.exe
+	Spotify.exe
+	ApplicationFrameHost.exe
+	NVDisplay.Container.exe
+	steamwebhelper.exe
+	Chatbox.exe
+	KOOK.exe
+	svchost.exe
+	TeraBoxWebService.exe
+	DTShellHlp.exe
+	WeChatAppEx.exe
+	svchost.exe
+	steam.exe
+	steamwebhelper.exe
+	HxOutlook.exe
+	ServiceHub.ThreadedWaitDialog.exe
+    Error Getting User Process: svchost - 拒绝访问。
+	Notion.exe
+	cloud-drive-ui.exe
+	WUDFHost.exe
+	chrome.exe
+	svchost.exe
+	Notion.exe
+	Battle.net.exe
+	ServiceHub.SettingsHost.exe
+	WeChatAppEx.exe
+	steamservice.exe
+	steamwebhelper.exe
+	svchost.exe
+	Spotify.exe
+	svchost.exe
+	Discord.exe
+	ctfmon.exe
+	Discord.exe
 	EscapeFromTarkov.exe
 		Mono found in process: EscapeFromTarkov.exe
 

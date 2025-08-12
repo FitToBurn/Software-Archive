@@ -61,7 +61,7 @@ namespace EscapeFromTarkovCheat.Feauters.ESP
                         if (!(current == null) && !(Main.MainCamera == null) && GameUtils.IsLootableContainerValid(current)){
                             Assembly assembly = Assembly.Load("Assembly-CSharp");
                             //public static IEnumerable<Item> GetAllItems
-                            MethodInfo method = assembly.GetType("\uEE4A",true).GetMethod("GetAllItems",BindingFlags.Static | BindingFlags.Public, null, new Type[] { typeof(Item) }, null);
+                            MethodInfo method = assembly.GetType("\uEEEF",true).GetMethod("GetAllItems",BindingFlags.Static | BindingFlags.Public, null, new Type[] { typeof(Item) }, null);
                             IEnumerable<Item> ItemsList = (IEnumerable<Item>)method.Invoke(null, new object[] { current.ItemOwner.RootItem });
                             float distanceTo = Vector3.Distance(Main.MainCamera.transform.position, current.transform.position);
                             bool? flag = null;

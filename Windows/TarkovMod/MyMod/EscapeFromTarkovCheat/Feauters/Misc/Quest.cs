@@ -98,7 +98,7 @@ namespace EscapeFromTarkovCheat.Feauters
                     continue;
                 }
 
-                if (quest.Template.Name == "Quest Name Goes Here")
+                if (quest.Template.Name == "XXXXXXXXXXXXXXXXXXX")
                 {
                     System.Console.WriteLine($"Trying to finish quest: {quest.Template.Name}");
                     foreach (var conditions in quest.Template.Conditions)

@@ -29,7 +29,6 @@ namespace Menu.UI
         private bool SpawnMenuToggle;
         private bool LootMenuToggle;
         private bool ItemMenuToggle;
-        int ContainerOptionsIndex = 0;
         string[] ContainerOptions = new string[] {
             "5c0a840b86f7742ffa4f2482",//THICC
             "5d235bb686f77443f4331278",//SICC
@@ -180,8 +179,6 @@ namespace Menu.UI
                     //    GenerateAirdrop();
                     //if (GUILayout.Button("Acid Green", GUILayout.Width(220f), GUILayout.Height(30f)))
                     //    GenerateAcidGreen();
-                    //if (GUILayout.Button("Quest", Array.Empty<GUILayoutOption>()))
-                    //    Settings.FinishQuest = true;
                     //if (GUILayout.Button("TraderStanding", Array.Empty<GUILayoutOption>()))
                     //    Settings.IncreaseTraderStanding = true;
 
@@ -211,6 +208,8 @@ namespace Menu.UI
                     GUILayout.Label($"Multiplier {(int)Settings.SpeedMulti}X");
                     Settings.SpeedMulti = GUILayout.HorizontalSlider(Settings.SpeedMulti, 5f, 50f);
                     GUILayout.Label("");
+                    if (GUILayout.Button("Quest", Array.Empty<GUILayoutOption>()))
+                        Settings.FinishQuest = true;
                     if (GUILayout.Button("Full Hydro & Energy", GUILayout.Width(180f), GUILayout.Height(50f)))
                         WaterAndFood();
                     if (GUILayout.Button("Add EXP", GUILayout.Width(180f), GUILayout.Height(30f)))
@@ -384,15 +383,15 @@ namespace Menu.UI
                     //    Spawnitem(4);
                     //}
 
-                    //if (GUILayout.Button("Spawn in Backpack", GUILayout.Width(220f), GUILayout.Height(40f)))
-                    //{
-                    //    Spawnitem(1);
-                    //}
-
-                    if (GUILayout.Button("Spawn Container", GUILayout.Width(220f), GUILayout.Height(40f)))
+                    if (GUILayout.Button("Spawn in Backpack", GUILayout.Width(220f), GUILayout.Height(40f)))
                     {
-                        Spawnitem(3);
+                        Spawnitem(1);
                     }
+
+                    //if (GUILayout.Button("Spawn Container", GUILayout.Width(220f), GUILayout.Height(40f)))
+                    //{
+                    //    Spawnitem(3);
+                    //}
 
                     if (GUILayout.Button("★Spawn Case", GUILayout.Width(220f), GUILayout.Height(40f)))
                     {
@@ -445,7 +444,7 @@ namespace Menu.UI
         public void SpawnConsumable()
         {
             ItemFactory itemFactory = new ItemFactory();
-            dynamic container = Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.SecuredContainer).ContainedItem;
+            dynamic container = Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.Backpack).ContainedItem;
 
             //弹药箱
             CompoundItem AmmoCase = itemFactory.CreateCompoundItem("5aafbde786f774389d0cbc0f");
@@ -474,7 +473,7 @@ namespace Menu.UI
                 Item Ammo = itemFactory.CreateItem("5fc382a9d724d907e2077dab");
                 AmmoCase.Grids[0].AddAnywhere(Ammo, EErrorHandlingType.Ignore);
             }
-            container.Grids[0].AddAnywhere(AmmoCase, EErrorHandlingType.Ignore);
+            container.Grids[0].AddItemWithoutRestrictions(AmmoCase, container.Grids[0].FindFreeSpace(AmmoCase));
 
             //物品箱 塞医疗
             CompoundItem ItemCase = itemFactory.CreateCompoundItem("59fb042886f7746c5005a7b2");
@@ -582,7 +581,7 @@ namespace Menu.UI
                 Item Ammo = itemFactory.CreateItem("60098ad7c2240c0fe85c570a");
                 ItemCase.Grids[0].AddAnywhere(Ammo, EErrorHandlingType.Ignore);
             }
-            container.Grids[0].AddAnywhere(ItemCase, EErrorHandlingType.Ignore);
+            container.Grids[0].AddItemWithoutRestrictions(ItemCase, container.Grids[0].FindFreeSpace(ItemCase));
 
             //榴弹箱
             CompoundItem GrenadeCase = itemFactory.CreateCompoundItem("5e2af55f86f7746d4159f07c");
@@ -596,7 +595,7 @@ namespace Menu.UI
                 Item Ammo = itemFactory.CreateItem("619256e5f8af2c1a4e1f5d92");
                 GrenadeCase.Grids[0].AddAnywhere(Ammo, EErrorHandlingType.Ignore);
             }
-            container.Grids[0].AddAnywhere(GrenadeCase, EErrorHandlingType.Ignore);
+            container.Grids[0].AddItemWithoutRestrictions(GrenadeCase, container.Grids[0].FindFreeSpace(GrenadeCase));
 
         }
 
@@ -621,12 +620,12 @@ namespace Menu.UI
             if (!GameUtils.IsInventoryItemValid(Eye))
             {
                 Item item = itemFactory.CreateItem("603409c80ca681766b6a0fb2");//NPP KlASS Condor
-                Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.Eyewear).Add(item, false, false);
+                Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.Eyewear).AddWithoutRestrictions(item);
             }
             if (!GameUtils.IsInventoryItemValid(Face))
             {
                 Item item = itemFactory.CreateItem("6570aead4d84f81fd002a033");//Death Shadow
-                Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.FaceCover).Add(item, false, false);
+                Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.FaceCover).AddWithoutRestrictions(item);
             }
             if (!GameUtils.IsInventoryItemValid(armor))
             {
@@ -652,12 +651,12 @@ namespace Menu.UI
             dynamic Face = Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.FaceCover).ContainedItem;
             dynamic Ear = Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.Earpiece).ContainedItem;
             dynamic Head = Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.Headwear).ContainedItem;
-            dynamic container = Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.SecuredContainer).ContainedItem;
+            //dynamic container = Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.SecuredContainer).ContainedItem;
 
             if (!GameUtils.IsInventoryItemValid(backpack))
             {
-                Item item = itemFactory.CreateItem("619cf0335771dd3c390269ae");//T20
-                //Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.Backpack).Add(item, false, false);
+                Item item = itemFactory.CreateItem("5df8a4d786f77412672a1e3b");//6Sh118
+                Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.Backpack).Add(item, false, false);
                 backpack = Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.Backpack).ContainedItem;
             }
             if (!GameUtils.IsInventoryItemValid(vest))
@@ -693,12 +692,12 @@ namespace Menu.UI
             if (!GameUtils.IsInventoryItemValid(Eye))
             {
                 Item item = itemFactory.CreateItem("603409c80ca681766b6a0fb2");//NPP KlASS Condor
-                Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.Eyewear).Add(item, false, false);
+                Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.Eyewear).AddWithoutRestrictions(item);
             }
             if (!GameUtils.IsInventoryItemValid(Face))
             {
                 Item item = itemFactory.CreateItem("6570aead4d84f81fd002a033");//Death Shadow
-                Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.FaceCover).Add(item, false, false);
+                Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.FaceCover).AddWithoutRestrictions(item);
             }
             if (!GameUtils.IsInventoryItemValid(Head))
             {
@@ -708,24 +707,24 @@ namespace Menu.UI
                 Item item4 = ConstructArmor("5ca20ee186f774799474abc2");//Vulkan-5
                 //Item item5 = ConstructArmor("5c0e874186f7745dc7616606");//Maska 1Sch
                 //Item item6 = ConstructArmor("58ac60eb86f77401897560ff");//Balaclava_dev
-                //container.Grids[0].AddAnywhere(item1, EErrorHandlingType.Ignore);
-                //container.Grids[0].AddAnywhere(item2, EErrorHandlingType.Ignore);
-                //container.Grids[0].AddAnywhere(item3, EErrorHandlingType.Ignore);
-                container.Grids[0].AddAnywhere(item4, EErrorHandlingType.Ignore);
-                //container.Grids[0].AddAnywhere(item5, EErrorHandlingType.Ignore);
-                //container.Grids[0].AddAnywhere(item6, EErrorHandlingType.Ignore);
+                //backpack.Grids[0].AddAnywhere(item1, EErrorHandlingType.Ignore);
+                //backpack.Grids[0].AddAnywhere(item2, EErrorHandlingType.Ignore);
+                //backpack.Grids[0].AddAnywhere(item3, EErrorHandlingType.Ignore);
+                backpack.Grids[0].AddAnywhere(item4, EErrorHandlingType.Ignore);
+                //backpack.Grids[0].AddAnywhere(item5, EErrorHandlingType.Ignore);
+                //backpack.Grids[0].AddAnywhere(item6, EErrorHandlingType.Ignore);
             }
             if (!GameUtils.IsInventoryItemValid(armor))
             {
                 //Item item = ConstructArmor("60a283193cb70855c43a381d");//THOR IC
                 //Item item = ConstructArmor("5b44cf1486f77431723e3d05");//Gen4 突击型
                 Item item = ConstructArmor("545cdb794bdc2d3a198b456a");//6B43
-                //container.Grids[0].AddAnywhere(item, EErrorHandlingType.Ignore);
+                //backpack.Grids[0].AddAnywhere(item, EErrorHandlingType.Ignore);
                 Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.ArmorVest).Add(item, false, false);
                 //Item itemP1 = itemFactory.CreateItem("656faf0ca0dce000a2020f77");//GAC 4sss2
                 //Item itemP2 = itemFactory.CreateItem("656faf0ca0dce000a2020f77");//GAC 4sss2
-                //container.Grids[0].AddAnywhere(itemP1, EErrorHandlingType.Ignore);
-                //container.Grids[0].AddAnywhere(itemP2, EErrorHandlingType.Ignore);
+                //backpack.Grids[0].AddAnywhere(itemP1, EErrorHandlingType.Ignore);
+                //backpack.Grids[0].AddAnywhere(itemP2, EErrorHandlingType.Ignore);
             }
             //if (!GameUtils.IsInventoryItemValid(Ear))
             //{
@@ -839,7 +838,7 @@ namespace Menu.UI
             XPAdder();
             try
             {
-                dynamic container = Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.SecuredContainer).ContainedItem;
+                dynamic container = Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.Backpack).ContainedItem;
                 if (!GameUtils.IsInventoryItemValid(container))
                     return;
                 CompoundItem ContainerItem = itemFactory.CreateCompoundItem(ContainerID);
@@ -859,11 +858,11 @@ namespace Menu.UI
                         }
                     }
                 }
-                container.Grids[0].AddAnywhere(ContainerItem, EErrorHandlingType.Ignore);
+                container.Grids[0].AddItemWithoutRestrictions(ContainerItem, container.Grids[0].FindFreeSpace(ContainerItem));
             }
             catch (Exception ex)
             {
-                EFT.UI.ConsoleScreen.Log($"Log: Exception occurred: {ex.Message}");
+                System.Console.WriteLine($"Log: Exception occurred: {ex.Message}");
             }
         }
 
@@ -875,14 +874,14 @@ namespace Menu.UI
             {
                 string itemId = ItemID;
                 Item item = itemFactory.CreateItem(itemId);
-                EFT.UI.ConsoleScreen.Log($"Log: Attempting to create item with ID: {itemId}");
+                System.Console.WriteLine($"Log: Attempting to create item with ID: {itemId}");
                 if (item == null)
                 {
-                    EFT.UI.ConsoleScreen.Log("Log: Failed to create item.");
+                    System.Console.WriteLine("Log: Failed to create item.");
                     return;
                 }
 
-                EFT.UI.ConsoleScreen.Log("Log: Item created successfully.");
+                System.Console.WriteLine("Log: Item created successfully.");
 
                 dynamic backpack = Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.Backpack).ContainedItem;
                 dynamic vest = Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.TacticalVest).ContainedItem;
@@ -896,7 +895,7 @@ namespace Menu.UI
                         if (GameUtils.IsInventoryItemValid(backpack))
                         {
                             backpack.Grids[0].AddAnywhere(item, EErrorHandlingType.Ignore);
-                            EFT.UI.ConsoleScreen.Log("Log: Item created successfully.");
+                            System.Console.WriteLine("Log: Item created successfully.");
                         }
                         else
                         {
@@ -918,7 +917,7 @@ namespace Menu.UI
                             {
                                 Grid.AddAnywhere(item, EErrorHandlingType.Ignore);
                             }
-                            EFT.UI.ConsoleScreen.Log("Log: Item created successfully.");
+                            System.Console.WriteLine("Log: Item created successfully.");
                         }
                         else
                         {
@@ -940,11 +939,11 @@ namespace Menu.UI
                         if (GameUtils.IsInventoryItemValid(container))
                         {
                             container.Grids[0].AddAnywhere(item, EErrorHandlingType.Ignore);
-                            EFT.UI.ConsoleScreen.Log("Log: Item created successfully.");
+                            System.Console.WriteLine("Log: Item created successfully.");
                         }
                         else
                         {
-                            Item newBackPackItem = itemFactory.CreateItem("5c0a794586f77461c458f892"); // Kappa OR BOSS
+                            Item newBackPackItem = itemFactory.CreateItem("5c093ca986f7740a1867ab12"); // Kappa
                             if (newBackPackItem != null)
                             {
                                 Main.LocalPlayer.Profile.Inventory.Equipment.GetSlot(EquipmentSlot.SecuredContainer).AddWithoutRestrictions(newBackPackItem);
@@ -969,12 +968,12 @@ namespace Menu.UI
                 }
                 else
                 {
-                    EFT.UI.ConsoleScreen.Log("Item Is a Quest Item, doing Nothing !");
+                    System.Console.WriteLine("Item Is a Quest Item, doing Nothing !");
                 }
             }
             catch (Exception ex)
             {
-                EFT.UI.ConsoleScreen.Log($"Log: Exception occurred: {ex.Message}");
+                System.Console.WriteLine($"Log: Exception occurred: {ex.Message}");
             }
         }
         public void XPAdder()
